@@ -4,6 +4,7 @@ import { Menu, AccountCircle, Brightness4, Brightness7 } from '@mui/icons-materi
 import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import useStyles from './styles';
+import { Sidebar } from '..';
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -68,7 +69,7 @@ const NavBar = () => {
                 </Drawer>
               ) : (
                 <Drawer>
-
+                  <Sidebar setMobileOpen={setMobileOpen} />
                 </Drawer>
               )}
         </nav>
